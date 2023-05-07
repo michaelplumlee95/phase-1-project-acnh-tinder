@@ -1,0 +1,34 @@
+/* background */
+body { 
+    background: url(https://cdn.mos.cms.futurecdn.net/G79YngbW86RJ2QtzFfZEu3-970-80.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% vh;
+  }
+
+  .card {
+    /* Add shadows to create the "card" effect */
+    position: absolute;
+    left: 50% ;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 5px;
+    background-color: #3D777F;
+    border-style: solid;
+    border-color: #293438;
+    
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
