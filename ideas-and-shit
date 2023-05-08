@@ -1,21 +1,27 @@
 // https://acnhapi.com/doc#tag/Villagers
 // Animal Crossing New Horizons Villager API
- 
+
 What I want my project to do:
 
 I want to implement a tinder-esque card based like/dislike system for picking animal crossing villagers that you would like on your island.
 
 Core features:
-    Simple cards showing the Villager's photo, name, personality, birthday, species, and gender.
-    A like and a dislike button.
-        on like: add character to a list of desired villagers
-        on dislike: add character to list of undesirables
-    Access to a list of desirable villagers
-    Access to a list of undesirable villagers
-    Ability to choose 10 villagers to add from your desirable list.
-    
+Simple cards showing the Villager's photo, name, personality, birthday, species, and gender.
+A like and a dislike button.
+on like: add character to a list of desired villagers
+on dislike: add character to list of undesirables
+Access to a list of desirable villagers
+Access to a list of undesirable villagers
+Ability to choose 10 villagers to add from your desirable list.
+
 Animations:
-    onHover, tilt card to the right for hovering over the like button
-    onHover, tilt card to the left for hovering over dislike button
-    onClick, send card off-screen to the right for choosing like
-    onClick, send card offscreen to the left for choosing dislike
+onHover, tilt card to the right for hovering over the like button
+onHover, tilt card to the left for hovering over dislike button
+onClick, send card off-screen to the right for choosing like
+onClick, send card offscreen to the left for choosing dislike
+\
+
+route 1: Random with fetch requests
+route 2: index entire stack
+
+Patch Request: show all liked villagers, send them a message / write a note
