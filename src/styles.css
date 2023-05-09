@@ -26,7 +26,6 @@ body {
     border-color: #293438;
     height: 580px;
     width: 256px;
-    /* transition: transform 0.3s ease; */
     transform-origin: bottom center;
   }
 
