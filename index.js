@@ -55,13 +55,20 @@ function likeVillager(villager) {
 }
 
 const card = document.querySelector(".card");
-// Add an event listener to the nextButton element
+
+// Add an event listener to rotate the card to the nextButton element
 nextButton.addEventListener("mouseover", () => {
-  // Apply a transformation to the card element
-  card.style.transform = "rotateZ(2deg) translateX(10px)";
+  card.style.transform = "rotateZ(2deg) translate(-50%,-50%)";
 });
 
 nextButton.addEventListener("mouseout", () => {
-  // Reset the transformation when the mouse moves away from the button
-  card.style.transform = "rotateZ(0deg) translateX(0px)";
+  card.style.transform = "rotateZ(0deg) translate(-50%,-50%)";
+});
+
+leftButton.addEventListener("mouseover", () => {
+  card.style.transform = "rotateZ(-2deg) translate(-50%,-50%)";
+});
+
+leftButton.addEventListener("mouseout", () => {
+  card.style.transform = "rotateZ(0deg) translate(-50%,-50%)";
 });

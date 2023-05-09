@@ -1,54 +1,5 @@
 {
   "liked": [
-    {
-      "id": 90,
-      "file-name": "cow00",
-      "name": {
-        "name-USen": "Patty",
-        "name-EUen": "Patty",
-        "name-EUde": "Patricia",
-        "name-EUes": "Vacarena",
-        "name-USes": "Vacarena",
-        "name-EUfr": "Margaux",
-        "name-USfr": "Margaux",
-        "name-EUit": "Patty",
-        "name-EUnl": "Patty",
-        "name-CNzh": "阿排",
-        "name-TWzh": "阿排",
-        "name-JPja": "カルピ",
-        "name-KRko": "밀크",
-        "name-EUru": "Пэтти"
-      },
-      "personality": "Peppy",
-      "birthday-string": "May 10th",
-      "birthday": "10/5",
-      "species": "Cow",
-      "gender": "Female",
-      "subtype": "B",
-      "hobby": "Fashion",
-      "catch-phrase": "how-now",
-      "icon_uri": "https://acnhapi.com/v1/icons/villagers/90",
-      "image_uri": "https://acnhapi.com/v1/images/villagers/90",
-      "bubble-color": "#7a2500",
-      "text-color": "#fffce9",
-      "saying": "A friend in need is a friend indeed!",
-      "catch-translations": {
-        "catch-USen": "how-now",
-        "catch-EUen": "how-now",
-        "catch-EUde": "muuhna",
-        "catch-EUes": "muuuu",
-        "catch-USes": "muuuu",
-        "catch-EUfr": "allez",
-        "catch-USfr": "oui oui",
-        "catch-EUit": "truuulà",
-        "catch-EUnl": "koebeest",
-        "catch-CNzh": "牟",
-        "catch-TWzh": "牟",
-        "catch-JPja": "だモー",
-        "catch-KRko": "음메",
-        "catch-EUru": "му-му"
-      },
-      "message": ""
-    }
+    
   ]
 }

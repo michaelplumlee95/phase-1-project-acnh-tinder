@@ -5,6 +5,10 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: 100% vh;
+    font-family: "Sigmar";
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px
+    
   }
 
   .card {
@@ -22,7 +26,12 @@ body {
     border-color: #293438;
     height: 580px;
     width: 256px;
-    transition: transform 0.3s ease;
+    /* transition: transform 0.3s ease; */
+    transform-origin: bottom center;
+  }
+
+  .card p {
+    margin: 5px
   }
 
   
