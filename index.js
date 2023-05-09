@@ -1,7 +1,13 @@
+addEventListener("DOMContentLoaded", (event) => {
+  getRandomVillager();
+});
+
 const villagerImage = document.querySelector(".photo");
 const villagerName = document.querySelector(".name");
 const villagerPersonality = document.querySelector(".personality");
 const villagerBirthday = document.querySelector(".birthday");
+const villagerSaying = document.querySelector(".saying");
+const villagerHobby = document.querySelector(".hobby");
 
 function getVillager(id) {
   fetch(`http://acnhapi.com/v1/villagers/${id}`)
@@ -27,9 +33,11 @@ leftButton.addEventListener("click", getRandomVillager);
 
 function renderVillager(villager) {
   currVillager = villager;
-  villagerName.textContent = villager.name["name-USen"];
-  villagerPersonality.textContent = villager.personality;
-  villagerBirthday.textContent = villager.birthday;
+  villagerName.textContent = "Name: " + villager.name["name-USen"];
+  villagerPersonality.textContent = "Personality: " + villager.personality;
+  villagerBirthday.textContent = "Birthday: " + villager.birthday;
+  villagerSaying.textContent = "Saying: " + villager.saying;
+  villagerHobby.textContent = "Hobby: " + villager.hobby;
   console.log(villager.image_uri);
   villagerImage.src = villager.image_uri;
 }
@@ -45,3 +53,15 @@ function likeVillager(villager) {
     .then((resp) => resp.json())
     .then((data) => console.log(data));
 }
+
+const card = document.querySelector(".card");
+// Add an event listener to the nextButton element
+nextButton.addEventListener("mouseover", () => {
+  // Apply a transformation to the card element
+  card.style.transform = "rotateZ(2deg) translateX(10px)";
+});
+
+nextButton.addEventListener("mouseout", () => {
+  // Reset the transformation when the mouse moves away from the button
+  card.style.transform = "rotateZ(0deg) translateX(0px)";
+});
