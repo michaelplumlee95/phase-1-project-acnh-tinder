@@ -37,7 +37,10 @@ nextButton.addEventListener("click", () => {
 
 //event handler for clicking the dislike button
 const leftButton = document.querySelector("#left");
-leftButton.addEventListener("click", getRandomVillager);
+leftButton.addEventListener("click", () => {
+  dislikeVillager(currVillager);
+  getRandomVillager();
+});
 
 //Renders the card with villager information
 function renderVillager(villager) {
