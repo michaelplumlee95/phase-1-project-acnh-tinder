@@ -63,6 +63,19 @@ function likeVillager(villager) {
     .then((data) => console.log(data));
 }
 
+//POST request to db.json to maintain a list of liked villagers
+function dislikeVillager(villager) {
+  fetch("http://localhost:3000/disliked", {
+    method: "POST",
+    body: JSON.stringify({ ...villager, message: "" }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((resp) => resp.json())
+    .then((data) => console.log(data));
+}
+
 //Event Listeners for rotating the card on mouseover of the left and right buttons
 nextButton.addEventListener("mouseover", () => {
   card.style.transform = "rotateZ(2deg) translate(-50%,-50%)";
