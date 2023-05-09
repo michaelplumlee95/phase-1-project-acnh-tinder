@@ -9,11 +9,7 @@ Core features:
 Simple cards showing the Villager's photo, name, personality, birthday, species, and gender.
 A like and a dislike button.
 on like: add character to a list of desired villagers
-on dislike: add character to list of undesirables
 Access to a list of desirable villagers
-Access to a list of undesirable villagers
-Ability to choose 10 villagers to add from your desirable list.
-
 Animations:
 onHover, tilt card to the right for hovering over the like button
 onHover, tilt card to the left for hovering over dislike button
@@ -25,3 +21,9 @@ route 1: Random with fetch requests
 route 2: index entire stack
 
 Patch Request: show all liked villagers, send them a message / write a note
+
+Next steps:
+
+Use document.createElement to create a list of liked villagers, put a button on the page somewhere that can do this
+
+Add in the ability to 'send a message' by using a patch request to the message property of the villager object in db.json.
