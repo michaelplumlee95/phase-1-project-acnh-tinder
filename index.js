@@ -12,6 +12,7 @@ const villagerPersonality = document.querySelector(".personality");
 const villagerBirthday = document.querySelector(".birthday");
 const villagerSaying = document.querySelector(".saying");
 const villagerHobby = document.querySelector(".hobby");
+const likedList = document.querySelector(".likedList ul");
 
 //GET request to ACNH Public API for villager info
 function getVillager(id) {
@@ -32,6 +33,7 @@ let currVillager;
 const nextButton = document.querySelector("#next");
 nextButton.addEventListener("click", () => {
   likeVillager(currVillager);
+  populateLikedList();
   getRandomVillager();
 });
 
@@ -63,7 +65,9 @@ function likeVillager(villager) {
     },
   })
     .then((resp) => resp.json())
-    .then((data) => console.log(data));
+    .then((const li = document.createElement("li");
+    li.textContent = villager.name["name-USen"];
+    likedList.appendChild(li);
 }
 
 //POST request to db.json to maintain a list of liked villagers
@@ -95,3 +99,15 @@ leftButton.addEventListener("mouseover", () => {
 leftButton.addEventListener("mouseout", () => {
   card.style.transform = "rotateZ(0deg) translate(-50%,-50%)";
 });
+
+//createElement for list items for liked list
+function populateLikedList() {
+  fetch("http://localhost:3000/liked")
+    .then((resp) => resp.json())
+    .then((likedVillagers) =>
+      likedVillagers.forEach((villager) => {
+        
+      })
+    );
+}
+
