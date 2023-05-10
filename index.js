@@ -16,6 +16,8 @@ const likedList = document.querySelector(".likedList ul");
 const dislikedList = document.querySelector(".dislikedList ul");
 const showDislikedButton = document.querySelector(".showDisliked");
 const showLikedButton = document.querySelector(".showLiked");
+const clearDislikedButton = document.querySelector(".clearDisliked");
+const clearLikedButton = document.querySelector(".clearLiked");
 
 //GET request to ACNH Public API for villager info
 function getVillager(id) {
@@ -70,7 +72,7 @@ function likeVillager(villager) {
     .then((data) => console.log(data));
 }
 
-//POST request to db.json to maintain a list of liked villagers
+//POST request to db.json to maintain a list of disliked villagers
 function dislikeVillager(villager) {
   fetch("http://localhost:3000/disliked", {
     method: "POST",
@@ -136,3 +138,5 @@ showLikedButton.addEventListener("click", () => {
   likedList.textContent = "";
   populateLikedList();
 });
+
+//TODO : create button to clear liked and disliked db.json values
