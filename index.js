@@ -13,6 +13,9 @@ const villagerBirthday = document.querySelector(".birthday");
 const villagerSaying = document.querySelector(".saying");
 const villagerHobby = document.querySelector(".hobby");
 const likedList = document.querySelector(".likedList ul");
+const dislikedList = document.querySelector(".dislikedList ul");
+const showDislikedButton = document.querySelector(".showDisliked");
+const showLikedButton = document.querySelector(".showLiked");
 
 //GET request to ACNH Public API for villager info
 function getVillager(id) {
@@ -33,7 +36,6 @@ let currVillager;
 const nextButton = document.querySelector("#next");
 nextButton.addEventListener("click", () => {
   likeVillager(currVillager);
-  populateLikedList();
   getRandomVillager();
 });
 
@@ -65,9 +67,7 @@ function likeVillager(villager) {
     },
   })
     .then((resp) => resp.json())
-    .then((const li = document.createElement("li");
-    li.textContent = villager.name["name-USen"];
-    likedList.appendChild(li);
+    .then((data) => console.log(data));
 }
 
 //POST request to db.json to maintain a list of liked villagers
@@ -106,8 +106,33 @@ function populateLikedList() {
     .then((resp) => resp.json())
     .then((likedVillagers) =>
       likedVillagers.forEach((villager) => {
-        
+        const li = document.createElement("li");
+        li.textContent = villager.name["name-USen"];
+        likedList.appendChild(li);
       })
     );
 }
 
+//createElement for list items for disliked list
+function populateDislikedList() {
+  fetch("http://localhost:3000/disliked")
+    .then((resp) => resp.json())
+    .then((dislikedVillagers) =>
+      dislikedVillagers.forEach((villager) => {
+        const li = document.createElement("li");
+        li.textContent = villager.name["name-USen"];
+        dislikedList.appendChild(li);
+      })
+    );
+}
+
+//create eventListener for disliked and liked lists
+showDislikedButton.addEventListener("click", () => {
+  dislikedList.textContent = "";
+  populateDislikedList();
+});
+
+showLikedButton.addEventListener("click", () => {
+  likedList.textContent = "";
+  populateLikedList();
+});
